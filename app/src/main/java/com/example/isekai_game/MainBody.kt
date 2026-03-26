@@ -101,13 +101,8 @@ class MainBody : AppCompatActivity() {
         name.text = intent.getStringExtra("name") ?: "Player"
 
         hitbtn.setOnClickListener {
-            val parts = hint2.text.toString().split("-")
-            val start = parts[0].toInt()
-            val end = parts[1].toInt()
-            val random = (start..end).random()
-            val hit = inputhit.text.toString()
-
-            if (hit.isEmpty()) {
+            val hitText = inputhit.text.toString()
+            if (hitText.isEmpty()) {
                 Toast.makeText(this, "Enter Your Hit", Toast.LENGTH_SHORT).show()
                 playSound(mpdamage)
                 hitbtn.isEnabled = false
@@ -126,7 +121,20 @@ class MainBody : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val hitVal = hit.toInt()
+            // Fixed splitting logic to handle both en-dash and hyphen
+            val rangeText = hint2.text.toString()
+            val parts = if (rangeText.contains("–")) rangeText.split("–") else rangeText.split("-")
+            
+            if (parts.size < 2) {
+                Toast.makeText(this, "Invalid range format", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val start = parts[0].trim().toIntOrNull() ?: 1
+            val end = parts[1].trim().toIntOrNull() ?: 10
+            val random = (start..end).random()
+
+            val hitVal = hitText.toIntOrNull() ?: 0
             if (hitVal !in start..end) {
                 Toast.makeText(this, "Please Enter Hit Between $start-$end", Toast.LENGTH_SHORT).show()
                 playSound(mplimit)

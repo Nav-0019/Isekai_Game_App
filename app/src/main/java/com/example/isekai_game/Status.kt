@@ -2,6 +2,7 @@ package com.example.isekai_game
 
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,7 +20,7 @@ class Status : AppCompatActivity() {
         }
         
         val hp = findViewById<TextView>(R.id.status_hp)
-        val back = findViewById<TextView>(R.id.backBtn)
+        val backbtn = findViewById<Button>(R.id.backBtn)
         val ep = findViewById<TextView>(R.id.status_ep)
         val mp = findViewById<TextView>(R.id.status_mp)
         val strength = findViewById<TextView>(R.id.status_strength)
@@ -35,9 +36,8 @@ class Status : AppCompatActivity() {
         equip.text = intent.getStringExtra("equip") ?: "Knife"
         power.text = intent.getStringExtra("power") ?: "20"
         
-        back.setOnClickListener {
+        backbtn.setOnClickListener {
             finish()
         }
-
     }
 }
