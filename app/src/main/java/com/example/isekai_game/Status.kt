@@ -19,7 +19,7 @@ class Status : AppCompatActivity() {
         }
         
         val hp = findViewById<TextView>(R.id.status_hp)
-        val back = findViewById<TextView>(R.id.backbtn)
+        val back = findViewById<TextView>(R.id.backBtn)
         val ep = findViewById<TextView>(R.id.status_ep)
         val mp = findViewById<TextView>(R.id.status_mp)
         val strength = findViewById<TextView>(R.id.status_strength)
