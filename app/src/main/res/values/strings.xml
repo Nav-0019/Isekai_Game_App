@@ -33,12 +33,12 @@
     <string name="back">Back</string>
     <string name="slim_slime">Slim Slime!!!</string>
     <string name="hitting_range">Hitting range: </string>
-    <string name="default_range">1-10</string>
+    <string name="default_range">1–10</string>
     <string name="attack_power_hint">Attack Power</string>
     <string name="hit_button">Hit</string>
     <string name="forfeit">FORFEIT</string>
     <string name="status_button">STATUS</string>
-    <string name="_1_10">1-10</string>
+    <string name="_1_10">1–10</string>
     <string name="attack_power">Attack Power</string>
     <string name="button">Button</string>
     <string name="forfiet">FORFIET</string>
