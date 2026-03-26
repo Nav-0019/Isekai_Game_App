@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".playerinfo">
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="339dp"
+        android:layout_height="439dp"
+        android:background="@drawable/body"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isekai Hero"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@id/body"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="258dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:backgroundTint="#F4F4F4"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="30sp"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toBottomOf="@+id/head1"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
+        android:layout_width="258dp"
+        android:layout_height="57dp"
+        android:background="@drawable/startbutton"
+        android:text="start"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/donate"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/donate"
+        android:layout_width="258dp"
+        android:layout_height="57dp"
+        android:background="@drawable/startbutton"
+        android:text="Donate"
+        android:layout_marginBottom="40sp"
+        android:backgroundTint="#00046F"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/body"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

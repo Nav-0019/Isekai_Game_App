@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="339dp"
+        android:layout_height="439dp"
+        android:background="@drawable/body"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isekai Hero"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@id/body"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/startbutton"
+        android:textColor="@color/white"
+        android:text="PLAY"
+        app:layout_constraintBottom_toBottomOf="@id/body"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@id/body"
+        app:layout_constraintTop_toBottomOf="@+id/head1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="227dp"
+        android:layout_height="228dp"
+        app:layout_constraintBottom_toTopOf="@+id/head1"
+        app:layout_constraintEnd_toEndOf="@id/body"
+        app:layout_constraintStart_toStartOf="@id/body"
+        app:layout_constraintTop_toTopOf="@id/body"
+        app:srcCompat="@drawable/hero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
