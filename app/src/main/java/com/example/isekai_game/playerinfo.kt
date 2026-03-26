@@ -3,7 +3,7 @@ package com.example.isekai_game
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.net.toUri
 
-class playerinfo : AppCompatActivity() {
+class PlayerInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,17 +22,18 @@ class playerinfo : AppCompatActivity() {
             insets
         }
 
-        val name = findViewById<TextView>(R.id.name)
+        val name = findViewById<EditText>(R.id.name)
         val start1 = findViewById<Button>(R.id.start)
         val donate = findViewById<Button>(R.id.donate)
 
         start1.setOnClickListener {
-            if(name.text.toString().isEmpty()){
+            val nameText = name.text.toString()
+            if(nameText.isEmpty()){
                 Toast.makeText(this, "Please Enter Your Name", Toast.LENGTH_SHORT).show()
             }
             else{
                 val intent = Intent(this, MainBody::class.java)
-                intent.putExtra("name", name.text.toString())
+                intent.putExtra("name", nameText)
                 startActivity(intent)
             }
         }
@@ -53,7 +54,8 @@ class playerinfo : AppCompatActivity() {
             try {
                 val chooser = Intent.createChooser(intent, "Pay with UPI")
                 startActivity(chooser)
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+                e.printStackTrace()
                 Toast.makeText(this, "No UPI app found", Toast.LENGTH_SHORT).show()
             }
         }

@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         val start1 = findViewById<TextView>(R.id.start)
 
         start1.setOnClickListener {
-            val intent = Intent(this, playerinfo::class.java)
+            val intent = Intent(this, PlayerInfo::class.java)
             startActivity(intent)
         }
 

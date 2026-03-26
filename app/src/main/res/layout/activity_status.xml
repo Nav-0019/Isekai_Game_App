@@ -10,7 +10,6 @@
     tools:context=".Status">
 
 
-
     <LinearLayout
         android:id="@+id/body"
         android:layout_width="339dp"
@@ -18,21 +17,21 @@
         android:background="@drawable/status"
         android:orientation="vertical"
         android:padding="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        tools:ignore="TextSizeCheck">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status:"
             android:layout_marginBottom="10sp"
-            android:textIsSelectable="false"
+            android:text="@string/status"
             android:textColor="@color/white"
+            android:textIsSelectable="false"
             android:textSize="30sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <!-- HP -->
         <LinearLayout
@@ -44,7 +43,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="HP"
+                android:text="@string/hp"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -52,7 +51,7 @@
                 android:id="@+id/status_hp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -67,7 +66,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="EP"
+                android:text="@string/ep"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -75,7 +74,7 @@
                 android:id="@+id/status_ep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -90,7 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="MP"
+                android:text="@string/mp"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -98,7 +97,7 @@
                 android:id="@+id/status_mp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="50"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -113,7 +112,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Strength"
+                android:text="@string/strength"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -121,7 +120,7 @@
                 android:id="@+id/status_strength"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -136,7 +135,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Agility"
+                android:text="@string/agility"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -144,7 +143,7 @@
                 android:id="@+id/status_agility"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -159,7 +158,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Power"
+                android:text="@string/power"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -167,7 +166,7 @@
                 android:id="@+id/status_power"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -179,10 +178,10 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Equipment"
+                android:text="@string/equipment"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -190,22 +189,21 @@
                 android:id="@+id/status_equip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Knife"
+                android:text="@string/knife"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/backbtn"
+            android:id="@+id/backBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:background="#7803C8C8"
-            android:text="Back"
+            android:text="@string/back"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="20sp"
-            />
+            android:textStyle="bold" />
 
 
     </LinearLayout>

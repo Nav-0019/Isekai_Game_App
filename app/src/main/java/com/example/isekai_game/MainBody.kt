@@ -51,14 +51,14 @@ class MainBody : AppCompatActivity() {
             Toast.makeText(this, "Error initializing audio", Toast.LENGTH_SHORT).show()
         }
 
-        val monsterimg = findViewById<ImageView>(R.id.monsterimg)
-        val monstername = findViewById<TextView>(R.id.monstername)
+        val monsterimg = findViewById<ImageView>(R.id.monsterImg)
+        val monstername = findViewById<TextView>(R.id.monsterName)
         val info = findViewById<TextView>(R.id.info)
         val hint1 = findViewById<TextView>(R.id.hint1)
         val hint2 = findViewById<TextView>(R.id.hint2)
-        val inputhit = findViewById<TextView>(R.id.inputhit)
-        val hitbtn = findViewById<TextView>(R.id.hitbtn)
-        val forfiet = findViewById<TextView>(R.id.forfiet)
+        val inputhit = findViewById<TextView>(R.id.inputHit)
+        val hitbtn = findViewById<TextView>(R.id.hitBtn)
+        val forfiet = findViewById<TextView>(R.id.forfeit)
         val status = findViewById<TextView>(R.id.status)
         val name = findViewById<TextView>(R.id.name)
 

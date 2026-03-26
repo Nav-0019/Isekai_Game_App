@@ -10,35 +10,36 @@
     tools:context=".MainBody">
 
     <LinearLayout
-        android:id="@+id/toplayout"
+        android:id="@+id/topLayout"
         android:layout_width="match_parent"
         android:layout_height="292dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/midlayout"
+        app:layout_constraintBottom_toTopOf="@+id/midLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/monsterimg"
+            android:id="@+id/monsterImg"
             android:layout_width="match_parent"
             android:layout_height="282dp"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/slime1" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/midlayout"
+        android:id="@+id/midLayout"
         android:layout_width="match_parent"
         android:layout_height="348dp"
         android:orientation="vertical"
         android:padding="20sp"
         android:paddingStart="60sp"
         android:paddingEnd="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/forfiet"
+        app:layout_constraintBottom_toTopOf="@+id/forfeit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toplayout">
+        app:layout_constraintTop_toBottomOf="@id/topLayout">
 
         <TextView
             android:id="@+id/name"
@@ -50,11 +51,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/monstername"
+            android:id="@+id/monsterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5sp"
-            android:text="Slim Slime!!!"
+            android:text="@string/slim_slime"
             android:textColor="@color/white"
             android:textSize="22sp" />
 
@@ -69,7 +70,7 @@
             android:textSize="20sp" />
 
         <LinearLayout
-            android:id="@+id/midlayoutlinearlayout"
+            android:id="@+id/midLayoutLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
@@ -80,7 +81,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hitting range: "
+                android:text="@string/hitting_range"
                 android:textColor="@color/white" />
 
             <TextView
@@ -88,58 +89,60 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1-10"
+                android:text="@string/_1_10"
                 android:textColor="@color/white" />
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/inputhit"
+            android:id="@+id/inputHit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
             android:alpha="0.7"
+            android:autofillHints=""
             android:backgroundTint="#CCCCCC"
-            android:hint="Attack Power"
+            android:hint="@string/attack_power"
             android:inputType="numberSigned"
             android:minHeight="48dp"
             android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/hitbtn"
+            android:id="@+id/hitBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#03C8C8"
-            android:text="Button"
-            android:textColor="@color/white" />
+            android:text="@string/button"
+            android:textColor="#37474F"
+            tools:ignore="VisualLintButtonSize" />
 
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/forfiet"
+        android:id="@+id/forfeit"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/startbutton"
-        android:text="FORFIET"
-        android:textColor="@color/white"
+        android:text="@string/forfeit"
+        android:textColor="#37474F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/status"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/midlayout" />
+        app:layout_constraintTop_toBottomOf="@+id/midLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/status"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/startbutton"
-        android:text="STATUS"
-        android:textColor="@color/white"
+        android:text="@string/status"
+        android:textColor="#37474F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/forfiet"
-        app:layout_constraintTop_toBottomOf="@+id/midlayout" />
+        app:layout_constraintStart_toEndOf="@+id/forfeit"
+        app:layout_constraintTop_toBottomOf="@+id/midLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
